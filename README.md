@@ -1,6 +1,4 @@
-# Final-Project
-
-## CIS 695 final project 
+# CIS 695 final project 
 
 ### Abstract
 India is a developing country with a massive population; this massive population puts much strain on local municipal bodies' infrastructure and work. 
@@ -23,4 +21,6 @@ comes from the citizen reporter section of a major newspaper outlet in India, wh
 3. ```conda activate <your_env_name>```
 4. ```cd Final-Project```
 5. ```pip install -r requirements.txt```
-6. Launch *Project_presentation.ipynb*
+6. In order to be able to geo-code the locations, a Google Maps Geocoding API key will be required. Set the api key as 'GMAP_API_KEY' environment variable.
+7. If jupyter is not installed, run ```conda install jupyter```
+8. Launch *Project_presentation.ipynb*
