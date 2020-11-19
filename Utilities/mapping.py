@@ -3,11 +3,11 @@ from folium import plugins
 from folium.plugins import MarkerCluster, HeatMap
 
 
-def plot_map(df, lat, long, city=None, zoom_start=10, search_term=None, report_path=None):
+def plot_map(df, lat, long, city=None, zoom_start=10, search_term=None, report_path=None, issue_col = 'Issues'):
     if city:
         df = df[df.filename.str.startswith(city.lower())]
     if search_term:
-        df = df[df.Issue.apply(str.lower).str.contains(search_term.lower())]
+        df = df[df[issue_col].apply(str.lower).str.contains(search_term.lower())]
 
     m = folium.Map(location=[lat, long],zoom_start=zoom_start)
 
