@@ -60,11 +60,12 @@ class NamedEntityRecognizer():
                 loss = losses.get('ner')
                 metrics = self.nlp.evaluate(self.data[:len(self.data)//5])
                 f1,precision,recall = metrics.ents_f,metrics.ents_p,metrics.ents_r
-                loss = itn,round(loss,2)
+                itn = itn
+                loss = round(loss,2) 
                 f1 = round(f1,2)
                 precision = round(precision,2)
                 recall = round(recall,2)
-                line = [str(loss),str(f1),str(precision),str(recall)]
+                line = [str(itn), str(loss),str(f1),str(precision),str(recall)]
                 mb.write(line,table=True)
     
     def save(self,name, path='models/'):
