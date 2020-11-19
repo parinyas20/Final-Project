@@ -14,7 +14,7 @@ def plot_map(df, lat, long, city=None, zoom_start=10, search_term=None, report_p
     for _,row in  df.iterrows():
         lat = row.get('lat')
         long = row.get('long')
-        issues = row.get('Issue')
+        issues = row.get(issue_col)
         duration = row.get('Duration')
         timestamp = row.get('TimeStamp')
         tooltip = f'''Issues: {issues},
